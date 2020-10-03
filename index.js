@@ -18,6 +18,8 @@ var played = [];
 var facing;
 var turn = null;
 
+const port = process.env.PORT || 3000; 
+
 var called = {"Morgan": false,
 			  "Brianna": false};
 
@@ -196,8 +198,8 @@ function reset() {
 	io.emit("reset");
 }
 
-http.listen(3000, function() {
-	console.log("listening on *:3000");
+http.listen(port, function() {
+	console.log(`listening on *:${port}`);
 });
 
 app.get("/morgan", function(req, res) {
@@ -212,8 +214,5 @@ app.get("/brianna", function(req, res) {
 app.use("/js", express.static(path.join(__dirname, 'js')));
 app.use("/css", express.static(path.join(__dirname, 'css')));
 
-app.listen(8080, function() {
-	console.log("listening on *:8080");
-});
 
 reset();
