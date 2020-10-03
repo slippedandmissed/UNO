@@ -1,0 +1,43 @@
+canvas {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+
+*:focus {
+	outline: none;
+}
+
+button {
+	background-color: #fecfff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	margin: 20px;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-weight: bold;
+	display: inline-block;
+	width: 300px;
+}
+
+button:hover {
+	background-color: #fdb0ff;
+}
+
+button:disabled {
+	background-color: #4d0069;
+}
+
+button:active {
+	background-color: #fc66ff;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	text-align: center;
+}
