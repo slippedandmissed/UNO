@@ -202,6 +202,10 @@ http.listen(port, function() {
 	console.log(`listening on *:${port}`);
 });
 
+app.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname + "/index.html"));
+});
+
 app.get("/morgan", function(req, res) {
 	res.sendFile(path.join(__dirname + "/morgan.html"));
 });
